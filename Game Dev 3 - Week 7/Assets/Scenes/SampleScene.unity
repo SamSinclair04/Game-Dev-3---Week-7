@@ -598,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoretext: {fileID: 756633667}
+  globalData: {fileID: 11400000, guid: 379916b3f287f3f41ab13a67513e2271, type: 2}
 --- !u!1 &196649256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5548,6 +5549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCollected: {fileID: 11400000, guid: d1a7ae840bdd909498adc2a9be18f44c, type: 2}
+  globalData: {fileID: 11400000, guid: 379916b3f287f3f41ab13a67513e2271, type: 2}
 --- !u!58 &814001493
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6605,11 +6607,11 @@ Transform:
   m_GameObject: {fileID: 942969407}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5235107, y: 0.2021479, z: -0.049909215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1297379872}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &942969409
 MonoBehaviour:
@@ -11795,7 +11797,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 942969408}
   - {fileID: 2067673515}
   - {fileID: 148805075}
   m_Father: {fileID: 0}
@@ -16216,6 +16217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2067673515}
   - component: {fileID: 2067673516}
+  - component: {fileID: 2067673517}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -16250,6 +16252,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad29404173db7044abc0becfe4cc94bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalData: {fileID: 11400000, guid: 379916b3f287f3f41ab13a67513e2271, type: 2}
+--- !u!114 &2067673517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067673514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b156b310ef7874480e7bf7c59e3dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: edcd5b2e25852244ba5b4b350ce2aa50, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2067673516}
+        m_TargetAssemblyTypeName: GameDevWithMarco.Managers.GameManager, Assembly-CSharp
+        m_MethodName: GameWon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2095118965
 GameObject:
   m_ObjectHideFlags: 0
@@ -16339,3 +16370,4 @@ SceneRoots:
   - {fileID: 814001485}
   - {fileID: 1297379872}
   - {fileID: 485087562}
+  - {fileID: 942969408}
